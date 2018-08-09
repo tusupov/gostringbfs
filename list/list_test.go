@@ -122,15 +122,15 @@ func TestList_BFS(t *testing.T) {
 		{
 			list: list{
 				items: map[string]string{
-					"012345": "1",
-					"6": "2",
-					"7": "3",
-					"8": "4",
-					"9": "5",
-					"0123": "6",
-					"456": "7",
-					"789": "8",
-					"012": "9",
+					"012345":  "1",
+					"6":       "2",
+					"7":       "3",
+					"8":       "4",
+					"9":       "5",
+					"0123":    "6",
+					"456":     "7",
+					"789":     "8",
+					"012":     "9",
 					"3456789": "10",
 				},
 			},
@@ -169,21 +169,21 @@ func TestList_BFS(t *testing.T) {
 
 func BenchmarkList_BFS(b *testing.B) {
 
-		list := New()
-		list.Put("4", "1")
-		list.Put("6", "2")
-		list.Put("12", "2")
-		list.Put("34", "2")
-		list.Put("56", "2")
-		list.Put("45", "2")
-		list.Put("123", "2")
+	list := New()
+	list.Put("4", "1")
+	list.Put("6", "2")
+	list.Put("12", "2")
+	list.Put("34", "2")
+	list.Put("56", "2")
+	list.Put("45", "2")
+	list.Put("123", "2")
 
-		find := "123456"
+	find := "123456"
 
-		b.ResetTimer()
+	b.ResetTimer()
 
-		for i := 0; i < b.N; i++ {
-			list.BFS(find)
-		}
+	for i := 0; i < b.N; i++ {
+		list.BFS(find)
+	}
 
 }

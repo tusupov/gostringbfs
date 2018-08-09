@@ -1,4 +1,4 @@
-package gostringbfs
+package main
 
 import (
 	"bufio"
