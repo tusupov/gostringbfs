@@ -14,7 +14,7 @@ func (s *list) Put(key, value string) {
 	s.items[key] = value
 }
 
-func (s list) BFS(needText string) ([]string, bool) {
+func (s list) FindText(needText string) ([]string, bool) {
 
 	n := len(needText)
 	if n == 0 {

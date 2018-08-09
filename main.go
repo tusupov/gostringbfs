@@ -50,7 +50,7 @@ func main() {
 		if len(needText) == 0 {
 			continue
 		}
-		if result, ok := substrMap.BFS(needText); !ok {
+		if result, ok := substrMap.FindText(needText); !ok {
 			fmt.Println("-1")
 		} else {
 			fmt.Println(strings.Join(result, ","))
